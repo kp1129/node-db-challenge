@@ -19,14 +19,7 @@ router.post('/', (req, res) => {
 router.get('/', (req, res) => {
     Projects.get()
     .then(response => res.status(200).json(response))
-    .catch(error => res.status(500).json({ errorMessage: "could not create project at this time" }))
+    .catch(error => res.status(500).json({ errorMessage: "could not retrieve projects at this time" }))
 })
-
-
-
-// TEST
-// router.get('/', (req, res) => {
-//     res.status(200).json({ message: "hello from projects!"})
-// });
 
 module.exports = router;
